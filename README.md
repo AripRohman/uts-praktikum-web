@@ -11,3 +11,4 @@ Aplikasi sederhana untuk mengelola nilai mahasiswa menggunakan PHP dan MySQL.
 5. Buka `adminlte.php` melalui server web lokal.
 
 Foto hasil unggahan disimpan di direktori `gambar/`. File gambar lokal tidak disertakan di repository.
+Saat data mahasiswa dihapus, foto hasil unggahannya juga dihapus jika tidak digunakan oleh data lain.

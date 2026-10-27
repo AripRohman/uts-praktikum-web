@@ -33,4 +33,33 @@ function uploadGambar($gambar)
 
     return 'gambar/' . $fileName;
 }
+
+function hapusGambarJikaTidakDipakai(mysqli $conn, ?string $imagePath): bool
+{
+    if ($imagePath === null || !preg_match('/\Agambar\/[a-f0-9]{32}\.(?:jpg|png|gif)\z/i', $imagePath)) {
+        return true;
+    }
+
+    $stmt = mysqli_prepare($conn, 'SELECT 1 FROM nilaimhs WHERE gambar = ? LIMIT 1');
+    if (!$stmt) {
+        return false;
+    }
+
+    mysqli_stmt_bind_param($stmt, 's', $imagePath);
+    if (!mysqli_stmt_execute($stmt)) {
+        mysqli_stmt_close($stmt);
+        return false;
+    }
+
+    mysqli_stmt_store_result($stmt);
+    $isUsed = mysqli_stmt_num_rows($stmt) > 0;
+    mysqli_stmt_close($stmt);
+
+    if ($isUsed) {
+        return true;
+    }
+
+    $filePath = __DIR__ . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $imagePath);
+    return !is_file($filePath) || unlink($filePath);
+}
 ?>
