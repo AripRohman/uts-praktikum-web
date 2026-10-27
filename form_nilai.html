@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nilai</title>
+</head>
+<body>
+    <form action="olah_nilai.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="aksi" value="tambah">
+        <label for="nim">NIM:</label><br>
+        <input type="text" id="nim" name="nim" required placeholder="Masukkan NIM"><br>
+
+        <label for="nama">Nama Mahasiswa:</label><br>
+        <input type="text" id="nama" name="nama_lngkp_mhs" required placeholder="Masukkan Nama"><br>
+
+        <label for="nilai">Nilai Angka (0-100):</label><br>
+        <input type="number" id="nilai" name="nilai_akhir" min="0" max="100" step="0.01" required placeholder="Masukkan Nilai"><br><br>
+
+        <label for="gambar">Foto Mahasiswa:</label><br>
+        <input type="file" id="gambar" name="gambar" accept="image/jpeg,image/png,image/gif" required><br><br>
+
+        <input type="submit" value="Kirim">
+        <!-- <button type="submit" name="proses">Kirim</button> -->
+    </form>
+
+</body>
+</html>

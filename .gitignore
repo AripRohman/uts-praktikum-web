@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+gambar/*
+!gambar/.gitkeep
+Thumbs.db
