@@ -2,13 +2,16 @@
 
 Aplikasi sederhana untuk mengelola nilai mahasiswa menggunakan PHP dan MySQL.
 
+## Fitur
+
+- Menambah, melihat, mengubah, dan menghapus data nilai mahasiswa.
+- Mengunggah foto mahasiswa.
+- Menghapus foto unggahan jika data mahasiswa dihapus.
+
 ## Menjalankan aplikasi
 
-1. Siapkan PHP dengan ekstensi MySQLi dan MySQL.
-2. Buat database bernama `db5d`.
-3. Sesuaikan pengaturan koneksi database di `koneksi.php`.
-4. Jalankan `table_nilai.php` sekali untuk membuat tabel `nilaimhs`.
-5. Buka `adminlte.php` melalui server web lokal.
-
-Foto hasil unggahan disimpan di direktori `gambar/`. File gambar lokal tidak disertakan di repository.
-Saat data mahasiswa dihapus, foto hasil unggahannya juga dihapus jika tidak digunakan oleh data lain.
+1. Siapkan PHP dengan MySQLi dan MySQL.
+2. Buat database `db5d`.
+3. Sesuaikan koneksi database di `koneksi.php`.
+4. Buka `table_nilai.php` sekali untuk membuat tabel.
+5. Jalankan melalui server lokal dan buka `adminlte.php`.
