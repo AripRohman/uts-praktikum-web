@@ -6,7 +6,6 @@ Aplikasi sederhana untuk mengelola nilai mahasiswa menggunakan PHP dan MySQL.
 
 - Menambah, melihat, mengubah, dan menghapus data nilai mahasiswa.
 - Mengunggah foto mahasiswa.
-- Menghapus foto unggahan jika data mahasiswa dihapus.
 
 ## Menjalankan aplikasi
 
